@@ -30,10 +30,9 @@
         <div class="comment-form">
             <hr />
             <h3 class="subtitle is-3">Leave a reply</h3>
-             <%= render 'comments/form'%>
+             <%=render 'comments/form'%>
         </div>
     </div>
-    <h2 class="subtitle is-5"><strong><%= @article.comment.count %></strong> Comments</h2>
-        <%=@article.id.inspect%>
-        <%= render @article.comment%>
+    <h2 class="subtitle is-5"><strong><%= @article.comments.count %></strong> Comments</h2>
+        <%= render 'comments/comment', comments:@article.comments%>
 </section>

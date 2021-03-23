@@ -1,27 +1,12 @@
-<%= form_with(model: @comment) do |form| %>
-  <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+<%= form_for([@article, @comment]) do |f|%>
 
-      <ul>
-        <% @comment.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <%=@article.inspect%>
+<div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+</div>
 
-  <div class="field">
-    <%=form.hidden_field :article_id, :value => @article.id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<div class="actions">
+    <%= f.submit %>
+</div>
+<%end%>

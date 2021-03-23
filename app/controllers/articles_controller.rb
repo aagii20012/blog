@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
     before_action :set_article, only: [:edit, :update, :show, :destroy]
     before_action :article_params, only: [:create,:update]
     before_action :banner_show, only: [:show,:index]
-    before_action :createNew, only: [:show]
     def new
         @article = Article.new
     end
@@ -19,6 +18,7 @@ class ArticlesController < ApplicationController
       end
     def show
         @article.punch(request)
+        @comment=Comment.new
     end
     def update
         if @article.update(article_params)
@@ -50,8 +50,5 @@ class ArticlesController < ApplicationController
         end
         def set_article
             @article = Article.find(params[:id])
-        end
-        def createNew
-            @comment = Comment.new
         end
 end

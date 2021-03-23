@@ -1,0 +1,8 @@
+<% comments.each do |c|%>
+    name is <%=c.user.username%><br>
+    comment is <%=c.comment%>
+    <%if current_user.id==c.user.id%>
+        <%= link_to 'delete', article_comments_path(c.article_id,c.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%end%>
+    <br>
+<%end%>
