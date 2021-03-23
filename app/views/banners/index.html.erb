@@ -16,7 +16,6 @@
       <tr>
         <td><%= banner.title %></td>
         <td><%= banner.description %></td>
-        <%= image_tag(banner.image, style:'width:300px') %>
         <td><%= link_to 'Show', banner %></td>
         <td><%= link_to 'Edit', edit_banner_path(banner) %></td>
         <td><%= link_to 'Destroy', banner, method: :delete, data: { confirm: 'Are you sure?' } %></td>

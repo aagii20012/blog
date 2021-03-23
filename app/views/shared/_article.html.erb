@@ -28,18 +28,20 @@
     </div>
   </div>
   <%if counter==locals[:row]%>
-    <div align="center">
-      <div class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-          <div class="box">
-            <img src="https://designshack.net/wp-content/uploads/background-design-trends-368x246.jpg" alt="" class="image"/>
-            <div class="text">
-                 <h2><%=locals[:ads].title%></h2>
-                 <p><%=locals[:ads].description%></p>
+    <a href="<%=@randam_banner.link%>">
+      <div align="center">
+        <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div class="box">
+            <%= image_tag(@randam_banner.banner_image,class:"image") %>
+              <div class="text">
+                  <h2><%=locals[:ads].title%></h2>
+                  <p><%=locals[:ads].description%></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </a>
   <%end%>
 <% end %>

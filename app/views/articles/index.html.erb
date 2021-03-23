@@ -7,13 +7,7 @@
         </div>
     <% end %>
 </div>
-<%= render 'shared/article', locals: {obj: @articles, ads: @randam_val,row: @id }  %>
+<%= render 'shared/article', locals: {obj: @articles, ads: @randam_banner,row: @id }  %>
 <div align="center">
     <%= will_paginate %>
 </div>
-<div align="center">
-    <div style="width:40%;height:30%;">
-        <%=@randam_val.inspect%>
-    </div>
-</div>
-<script src="/js/main.js">

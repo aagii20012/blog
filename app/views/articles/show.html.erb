@@ -2,10 +2,10 @@
       <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
           <div class="box">
-            <img src="https://designshack.net/wp-content/uploads/background-design-trends-368x246.jpg" alt="" class="image"/>
+            <%= image_tag(@randam_banner.banner_image,class:"image") %>
             <div class="text">
-                 <h2><%=@randam_val.title%></h2>
-                 <p><%=@randam_val.description%></p>
+                 <h2><%=@randam_banner.title%></h2>
+                 <p><%=@randam_banner.description%></p>
             </div>
           </div>
         </div>
@@ -25,3 +25,15 @@
 <p>Number of views: <%= @article.hits %><p>
 
 <%= commontator_thread(@article) %>
+<section class="section comments">
+    <div class="container">
+        <div class="comment-form">
+            <hr />
+            <h3 class="subtitle is-3">Leave a reply</h3>
+             <%= render 'comments/form'%>
+        </div>
+    </div>
+    <h2 class="subtitle is-5"><strong><%= @article.comment.count %></strong> Comments</h2>
+        <%=@article.id.inspect%>
+        <%= render @article.comment%>
+</section>

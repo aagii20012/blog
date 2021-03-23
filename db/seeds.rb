@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!([{username:"Arie",email:"Arie@gmail.com",password_digest:27259},
-{username:"Reuven",email:"Reuven@gmail.com",password_digest:68411},
-{username:"Lexie",email:"Lexie@gmail.com",password_digest:66945},
-{username:"Maribel",email:"Maribel@gmail.com",password_digest:11691},
-{username:"Edik",email:"Edik@gmail.com",password_digest:32471},
-{username:"Gerianna",email:"Gerianna@gmail.com",password_digest:1142},
-{username:"Gabi",email:"Gabi@gmail.com",password_digest:6148},
-{username:"Rance",email:"Rance@gmail.com",password_digest:36246},
-{username:"Hildagarde",email:"Hildagarde@gmail.com",password_digest:11569},
-{username:"Cirillo",email:"Cirillo@gmail.com",password_digest:53964}])
+User.create!([{username:"Arie",email:"Arie@gmail.com",password:"27259"},
+{username:"Reuven",email:"Reuven@gmail.com",password:"68411"},
+{username:"Lexie",email:"Lexie@gmail.com",password:"66945"},
+{username:"Maribel",email:"Maribel@gmail.com",password:"11691"},
+{username:"Edik",email:"Edik@gmail.com",password:"32471"},
+{username:"Gerianna",email:"Gerianna@gmail.com",password:"1142"},
+{username:"Gabi",email:"Gabi@gmail.com",password:"6148"},
+{username:"Rance",email:"Rance@gmail.com",password:"36246"},
+{username:"Hildagarde",email:"Hildagarde@gmail.com",password:"11569"},
+{username:"Cirillo",email:"Cirillo@gmail.com",password:"53964"}])
 
 Article.create!(
     [{title:"Monkey, bleeding heart",description:"Theropithecus gelada is animal",user_id:7},
