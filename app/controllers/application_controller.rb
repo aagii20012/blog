@@ -14,4 +14,10 @@ class ApplicationController < ActionController::Base
             redirect_to root_path
         end
     end
+    def banner_show
+        @id=rand(Banner.last.try(:id))
+        @id=@id+1
+        @randam_val=Banner.find(@id);
+        @id=rand(1..3)
+    end
 end

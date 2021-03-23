@@ -10,6 +10,7 @@
     "bootstrap-sass": "^3.4.1",
     "jquery": "^3.6.0",
     "jquery-ujs": "^1.2.2",
+    "react-html5-camera-photo": "^1.5.4",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

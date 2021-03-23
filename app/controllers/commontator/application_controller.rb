@@ -1,4 +1,4 @@
-class Commontator::ApplicationController < ::ApplicationController
+class Commontator::ApplicationController < ActionController::Base
   before_action :commontator_set_user, :ensure_user
 
   rescue_from Commontator::SecurityTransgression, with: -> { head(:forbidden) }

@@ -62,7 +62,7 @@ Commontator.configure do |config|
   #   # view.commontator_gravatar_image_tag(user, 1, s: 60, d: 'mm')
   # end
   config.user_avatar_proc = ->(user, view) do
-    # view.commontator_gravatar_image_tag(user, 1, s: 60, d: 'mm')
+     view.commontator_gravatar_image_tag(user, 1, s: 60, d: 'mm')
   end
 
   # user_email_proc
@@ -75,7 +75,7 @@ Commontator.configure do |config|
   # If the mailer argument is not nil, then Commontator intends to send an email to
   # the address returned; you can prevent it from being sent by returning a blank String
   # Default: ->(user, mailer) { user.try(:email) || '' }
-  config.user_email_proc = ->(user, mailer) { user.try(:email) || '' }
+  #config.user_email_proc = ->(user, mailer) { user.try(:email) || '' }
 
   # user_mentions_proc
   # Type: Proc

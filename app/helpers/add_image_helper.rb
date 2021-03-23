@@ -1,0 +1,2 @@
+module AddImageHelper
+end

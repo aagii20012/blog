@@ -61,3 +61,4 @@ gem "punching_bag"
 gem 'jquery-rails'
 
 gem 'commontator'
+gem 'aws-sdk-s3'

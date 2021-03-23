@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
     before_action :current_user , only:[:show, :create, :index]
     before_action :set_article, only: [:edit, :update, :show, :destroy]
     before_action :article_params, only: [:create,:update]
+    before_action :banner_show, only: [:show,:index]
     def new
         @article = Article.new
     end
