@@ -27,12 +27,11 @@
 <%= commontator_thread(@article) %>
 <section class="section comments">
     <div class="container">
-        <div class="comment-form">
-            <hr />
+        <div class="be-comment-block">
+          <h1 class="comments-title">Comments (<%= @article.comments.count %>)</h1>
             <h3 class="subtitle is-3">Leave a reply</h3>
              <%=render 'comments/form'%>
+         <%= render 'comments/comment', comments:@article.comments%>
         </div>
     </div>
-    <h2 class="subtitle is-5"><strong><%= @article.comments.count %></strong> Comments</h2>
-        <%= render 'comments/comment', comments:@article.comments%>
 </section>
