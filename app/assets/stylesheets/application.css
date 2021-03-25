@@ -68,6 +68,7 @@ body{
 
 .be-comment-content {
   margin-left: 80px;
+  width: 50%;
 }
 
 .be-comment-content span {
@@ -87,7 +88,7 @@ body{
 
 .be-comment-content span {
   display: inline-block;
-  width: 49%;
+  width: 100%;
   margin-bottom: 15px;
 }
 

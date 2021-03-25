@@ -1,3 +1,4 @@
+<%if @randam_banner.present?%>
 <div align="center">
       <div class="row">
         <div class="col-xs-8 col-xs-offset-2">
@@ -11,6 +12,7 @@
         </div>
       </div>
  </div>
+<%end%>
 
 <h2 align="center">Title: <%= @article.title %></h2>
 <div class="well col-xs-8 col-xs-offset-2">
@@ -27,11 +29,9 @@
 <%= commontator_thread(@article) %>
 <section class="section comments">
     <div class="container">
-        <div class="be-comment-block">
           <h1 class="comments-title">Comments (<%= @article.comments.count %>)</h1>
             <h3 class="subtitle is-3">Leave a reply</h3>
              <%=render 'comments/form'%>
          <%= render 'comments/comment', comments:@article.comments%>
-        </div>
     </div>
 </section>

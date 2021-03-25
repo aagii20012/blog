@@ -15,9 +15,11 @@ class ApplicationController < ActionController::Base
         end
     end
     def banner_show
-        last=Banner.last.id
-        first =Banner.first.id
-        @randam_banner=Banner.find(first..last);
-        @id=rand(1..3)
+        if Banner.where(id: Banner.last.id).present?
+            last =Banner.last.id
+            first =Banner.first.id
+            @randam_banner=Banner.find(first..last);
+            @id=rand(1..3)
+        end
     end
 end

@@ -62,3 +62,12 @@ gem 'jquery-rails'
 
 gem 'commontator'
 gem 'aws-sdk-s3'
+
+gem 'activeadmin'
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+
+gem 'kaminari'
+gem "bootstrap-kaminari-views"
