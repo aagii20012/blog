@@ -1,0 +1,19 @@
+-comments.each do |c|
+    div class="be-comment"
+            div class="be-img-comment"
+                a href="blog-detail-2.html"
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
+            div class="be-comment-content"
+                span class="be-comment-name"
+                    a href="#"
+                        =c.user.username
+                span class="be-comment-time"
+                    i class="fa fa-clock-o"
+                        |May 27, 2015 at 3:14am
+                div
+                    p class="be-comment-text"
+                        =c.comment
+                    p class="be-comment-time"
+                        -if current_user.id==c.user.id
+                            =link_to 'delete', article_comments_path(c.article_id,c.id), method: :delete, data: { confirm: 'Are you sure?' }
+    <br>

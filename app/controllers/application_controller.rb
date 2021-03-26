@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
         if Banner.where(id: Banner.last.id).present?
             last =Banner.last.id
             first =Banner.first.id
+            last=last+1
             @randam_banner=Banner.find(first..last);
             @id=rand(1..3)
         end

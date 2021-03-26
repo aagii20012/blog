@@ -71,3 +71,5 @@ gem 'pundit'
 
 gem 'kaminari'
 gem "bootstrap-kaminari-views"
+
+gem 'slim'
